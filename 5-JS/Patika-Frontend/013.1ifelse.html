@@ -1,11 +1,21 @@
-<input type="number" id="vize"   min="0"   max="100" step="1"   placeholder="vize">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="number" id="vize"   min="0"   max="100" step="1"   placeholder="vize">
 <input type="number" id="final"   min="0"   max="100" step="1"   placeholder="final">
 <div></div>
 <button>Ortalama Bul</button>
-<script>
+<script src="013ifelse.js">
     document.querySelector("button").addEventListener("click", function() {
         const vize = Number(document.querySelector("#vize").value);
         const final = Number(document.querySelector("#final").value);
         document.querySelector("div").innerHTML = (vize * 0.4) + (final * 0.6);
     })
 </script>
+</body>
+</html>
