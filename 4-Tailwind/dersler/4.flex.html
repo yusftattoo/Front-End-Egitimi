@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tailwind CSS Flex</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="p-8">
+    <h1 class="text-4xl font-bold">Tailwind CSS Flex</h1>
+    <h2 class="text-2xl font-medium mt-4 mb-2">Example</h2>
+    <p>Tailwind CSS, esnek düzenler oluşturmak için Flexbox sistemini de destekler.
+       Flexbox, elementlerin düzenini ve hizalamasını kolayca yönetmenizi sağlar.</p>
+    <div class="text-white text-center gap-4 flex">
+      <div class="p-4 shadow rounded bg-indigo-500 flex-auto">01</div>
+      <div class="p-4 shadow rounded bg-indigo-500 flex-auto">02</div>
+      <div class="p-4 shadow rounded bg-indigo-500 flex-auto">03</div>
+    </div>
+    <h2 class="text-2xl font-medium mt-4 mb-2">basis-*</h2>
+    <p>flex-basis-{size}: Elementin başlangıç boyutunu belirler.
+      flex-shrink-{number}: Elementin küçülme oranını belirler. </p>
+    <div class="text-white text-center gap-4 flex">
+      <div class="p-4 shadow rounded bg-pink-500 basis-2/12">01</div>
+      <div class="p-4 shadow rounded bg-pink-500 basis-4/12">02</div>
+      <div class="p-4 shadow rounded bg-pink-500 basis-6/12">03</div>
+    </div>
+    <h2 class="text-2xl font-medium mt-4 mb-2">Flex Direction</h2>
+    <h3 class="text-2xl font-medium mt-4 mb-2">flex-row, flex-row-reverse</h3>
+    <div class="text-white text-center gap-4 flex flex-row-reverse">
+      <div class="p-4 shadow rounded bg-amber-500 flex-auto">01</div>
+      <div class="p-4 shadow rounded bg-amber-500 flex-auto">02</div>
+      <div class="p-4 shadow rounded bg-amber-500 flex-auto">03</div>
+      <pre>
+        Flex Direction:
+        flex-row: Elementleri yatay sırayla hizalar.
+        flex-col: Elementleri dikey sırayla hizalar.
+        flex-row-reverse: Elementleri ters yatay sırayla hizalar.
+        flex-col-reverse: Elementleri ters dikey sırayla hizalar.
+      </pre>
+    </div>
+    <h3 class="text-2xl font-medium mt-4 mb-2">flex-col, flex-col-reverse</h3>
+    <div class="text-white text-center gap-4 flex flex-col-reverse">
+      <div class="p-4 shadow rounded bg-sky-500 flex-auto">01</div>
+      <div class="p-4 shadow rounded bg-sky-500 flex-auto">02</div>
+      <div class="p-4 shadow rounded bg-sky-500 flex-auto">03</div>
+    </div>
+    <h2 class="text-2xl font-medium mt-4 mb-2">Flex Wrap</h2>
+    <h3 class="text-2xl font-medium mt-4 mb-2">flex-wrap</h3>
+      <div class="text-white text-center gap-4 flex flex-wrap">
+      <div class="p-4 shadow rounded bg-lime-500 w-1/3">01</div>
+      <div class="p-4 shadow rounded bg-lime-500 w-1/3">02</div>
+      <div class="p-4 shadow rounded bg-lime-500 w-1/3">03</div>
+      <p>Satırların ekran sığması için verilen ölçüler ile 3 box ı, verilen gap nedeni ile
+        ekrana konumlandıramadığı/sığdıramadığı için alt satıra ektarıyor.</p>
+    </div>
+    <h3 class="text-2xl font-medium mt-4 mb-2">flex-nowrap</h3>
+    <div class="text-white text-center gap-4 flex flex-nowrap">
+      <div class="p-4 shadow rounded bg-red-500 w-1/3">01</div>
+      <div class="p-4 shadow rounded bg-red-500 w-1/3">02</div>
+      <div class="p-4 shadow rounded bg-red-500 w-1/3">03</div>
+    </div>
+    <p>Satırların ekran sığması için verilen ölçüler ile 3 box ı, verilen gap'ı kaldırmadan
+      ekrana konumlandırmak/sığdırmak için alt satıra aktarmıyor ölçüleri eşit şekilde otomatik belirliyor..</p>
+
+
+    <h2 class="text-2xl font-medium mt-4 mb-2">Flex Grow</h2>
+    <p>flex-grow-{number}: Elementin büyüme oranını belirler.</p>
+    <h3 class="text-2xl font-medium mt-4 mb-2">flex-grow</h3>
+    <div class="text-white text-center gap-4 flex">
+      <div class="p-4 shadow rounded bg-stone-700">Logo</div>
+      <div class="p-4 shadow rounded bg-stone-400 grow">Menu</div>
+      <div class="p-4 shadow rounded bg-stone-700">Button</div>
+    </div>
+    <h3 class="text-2xl font-medium mt-4 mb-2">grow-0</h3>
+    <div class="text-white text-center gap-4 flex">
+      <div class="p-4 shadow rounded bg-stone-700 flex-auto">Menu</div>
+      <div class="p-4 shadow rounded bg-stone-400 grow-0">Logo</div>
+      <div class="p-4 shadow rounded bg-stone-700 flex-auto">Button</div>
+    </div>
+    <p>grow eklenen box tüm boslugu kapliyor</p>
+    <h2 class="text-2xl font-medium mt-4 mb-2">Justify Content</h2>
+    <div class="text-white text-center gap-4 flex bg-pink-100 justify-center">
+      <div class="p-4 shadow rounded bg-pink-500">01</div>
+      <div class="p-4 shadow rounded bg-pink-500">02</div>
+      <div class="p-4 shadow rounded bg-pink-500">03</div>
+      <div class="p-4 shadow rounded bg-pink-500">04</div>
+    </div>
+    <pre>
+      Justify Content:
+      justify-start: Elementleri başa hizalar.
+      justify-center: Elementleri ortaya hizalar.
+      justify-end: Elementleri sona hizalar.
+      justify-between: Elementler arasında eşit boşluk bırakır.
+      justify-around: Elementler arasında eşit boşluk bırakır ve kenarlarda yarım boşluk bırakır.
+      justify-evenly: Elementler arasında eşit boşluk bırakır.
+    </pre>
+    <h2 class="text-2xl font-medium mt-4 mb-2">Align Items</h2>
+    <div class="text-white text-center gap-4 flex bg-violet-100 items-center h-60">
+      <div class="p-4 shadow rounded bg-violet-500">01</div>
+      <div class="p-4 shadow rounded bg-violet-500 self-start">02</div>
+      <div class="p-4 shadow rounded bg-violet-500 self-end">03</div>
+      <div class="p-4 shadow rounded bg-violet-500">04</div>
+      <pre>
+        Align Items
+          items-start: Elementleri üstte hizalar.
+          items-center: Elementleri ortada hizalar.
+          items-end: Elementleri altta hizalar.
+          items-baseline: Elementleri metin taban çizgisine hizalar.
+          items-stretch: Elementleri esnetir ve aynı hizaya getirir.
+      </pre>
+    </div>
+    <h2 class="text-2xl font-medium mt-4 mb-2">Align Self Items</h2>
+    <div class="text-white text-center gap-4 flex bg-violet-100 h-60">
+      <div class="p-4 shadow rounded bg-violet-500">01</div>
+      <div class="p-4 shadow rounded bg-violet-300 self-center">02</div>
+      <div class="p-4 shadow rounded bg-violet-500">03</div>
+    <pre>
+      h-60 verildiğinde item-* verilmezse kolon şeklinde uzar. 
+      item-* verilirse uzunluğu baz almaz 
+      uzunluk üzerinden boxların anakaplayıcı alanı ile boxları konumlandırır.
+      items-stretch: boxları uzatır
+      end-start-center değişkenleri uzunluk üzerinden konumlandırır..
+    </pre>
+    </div>
+    <h2 class="text-2xl font-medium mt-4 mb-2">Align Items</h2>
+    <div class="text-white text-center gap-4 flex bg-violet-100 items-center h-60">
+      <div class="p-4 shadow rounded bg-violet-500  flex-auto ">01</div>
+      <div class="p-4 shadow rounded bg-violet-500  flex-auto self-end">02</div>
+      <div class="p-4 shadow rounded bg-violet-500  flex-auto ">03</div>
+    </div>
+  </body>
+</html>

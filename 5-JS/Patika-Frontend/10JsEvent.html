@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS EVEnts</title>
+</head>
+<body>
+    <h1>JS Event .</h1>
+    <button id="button">Mouse Event</button>
+     <input id="input" type="text" placeholder="Input Event" style="margin: 10px 0 ;">
+     <button onclick="handleClear()">Clear Event</button>
+    <script>
+        var body = document.body;
+        var body = document.body;
+        var button = document.getElementById("button");
+        // bir fonksiyon ile erişmek için button idsi verildi
+        // ve buraya değişken atanır (var button = ....bla bla)
+        var input = document.getElementById("input");
+        // input id li elemente sahip elementi input değişkenine atandı
+
+
+           
+        function handleKeyUp(event) {
+            console.log("keyUp", event);
+        }
+        /* handle yazdığımızda bir event in listener'ına verdiğimizde, 
+        html eventleri dinlediğimiz listener sınırlandırmasına dahil
+         olduğunu anlaşılmasını koaylaştırıyor. bu neden ile handle yazılıyor. */
+            //Basma işlemi bırakıldığında çalışır.
+
+            //  ????????????????  daha sonra bu kod bloğunu aç
+            
+         function handleKeyDown(event) {
+             console.log("keyDown", event);
+         }
+         body.addEventListener("keyup", handleKeyUp);
+         body.addEventListener("keydown", handleKeyDown);
+           
+
+        // !!!!! *********************** !!!!!!
+        // buton oluşturma ve buton ile etkileşim 
+
+
+        function handleClick(event){
+            body.style.backgroundColor ="#D9E997"
+            //butona tıkladığımızda arka planın rengi değişir.
+            console.log("click", event);
+        }
+
+        function handleMouseOver(event){
+            //butonu üzerine geldiğimizde arka planın rengi değişir
+            body.style.backgroundColor ="#a4aa89"
+            console.log("mouseover", event);
+        }
+        function handleMouseOut(event){
+            //butonu üzerine gittiğimizde arka planın rengi değişir
+            body.style.backgroundColor ="#a696e9"
+            console.log("mouseout", event);
+        }
+
+        button.addEventListener("click", handleClick);
+        button.addEventListener("mouseover", handleMouseOver);
+        button.addEventListener("mouseout", handleMouseOut);
+        
+
+        // ınput içerisinde bilgi yazdıldığında console a yansır.
+        function handleInput(event){
+            console.log("input", event);
+        }
+        
+        //Add input Event
+        input.addEventListener("input", handleInput);
+
+        // silmek istediğimiz listener ı verip- kendisine silmek istediğimiz parametreyi veriyoruz.
+        function handleClear(){
+            //Add Keyboard Event
+            body.removeEventListener("keyup", handleKeyUp);
+            body.removeEventListener("keydown", handleKeyDown);
+
+            // Add Mouse Event
+            button.removeEventListener("click", handleClick);
+            button.removeEventListener("mouseover", handleMouseOver);
+            button.removeEventListener("mouseout", handleMouseOut);
+            // Add Input Event
+        }
+    </script>
+
+    <pre>
+        <strong>AnimationEvent</strong> CSS Animasyonları
+        <strong>ClipboardEvent</strong> Panonun değiştirilmesi
+        <strong>DragEvent</strong>  Sürükle bırak etkileşimi
+        <strong>FocusEvent</strong> odakla ilgili aksiyonlar
+        <strong>InputEvent</strong> kullanıcı girişi
+        <strong>KeyboardEvent</strong>kalvye etkileşimi
+        <strong>MouseEvent</strong> fare etkileşimi
+        <strong>TocuhEvent</strong> dokunmatik etkileşimi
+        <strong>WheelEvent</strong> Fare -tekerlek etkileşimi
+        <strong>UiEventy</strong> kullanıcı arayüzü erkileşimi
+
+    </pre>
+</body>
+</html>

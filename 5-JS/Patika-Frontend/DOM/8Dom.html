@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JavaScript DOM</title>
+<style>
+    body.custom-class1{ 
+      /* aşağıda setTime ile body.classList.add in buradaki dizinine komut gönderildi*/
+    background-color: rgb(190, 68, 68);
+    
+  }
+</style>
+</head>
+<body>
+
+  <h1>JavaScript Dom</h1>
+  <h2>Elementleri manipüle etmek için seçicileri kullanmak..</h2>
+<ul>
+    <li id="html" class="course">HTML</li>
+    <li id="css" class="course">CSS</li>
+    <li id="javascript" class="course">JavaScript</li>
+    <li id="tailwindcss" class="course">Tailwind</li>
+</ul>
+<p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, laudantium.
+    Lorem ipsum dolor sit amet consectetur.
+    Lorem ipsum dolor sit amet consectetur adipisicing.
+</p>
+<p>Lorem, ipsum dolor sit amet consectetur adipisicing.
+   Lorem ipsum dolor sit amet consectetur adipisicing.
+   Lorem ipsum dolor sit amet, consectetur adipisicing.
+</p>
+<script>
+  console.log(document);
+  // burada rootElement dediğimizde kök dizinindeki html seçilmiş olur.
+  console.log(document.rootElement);
+  console.log(document.head);
+  console.log(document.body);
+  
+  var body = document.body;
+  // document.body.style.background = "#F4F4F4";
+  body.dataset.uuid = "#123";
+  //body elementinin içerisine id tanımlama.
+  body.setAttribute("id", "custom-id"); //  id, class, src,href gibi standart niteliktedir
+  // ikisi arasında ki farklı "setAttribute-dataset" adında açıklandı
+  body.classList.add("custom-class1"); /* Yeni bir sınıf eklemek.
+   önceki nitelikleri manipüle etmek için kullanılır. yeni stillendirmeler eklenir..*/
+  //belirli bir süre sonra yapılmasını istediğimi bir işlem komutu vermek
+  setTimeout(() => {
+    body.classList.add("custom-class1", "custom-class2");
+  },3000); // açıklama: birsaniye sonra {içerisindeki} kodu çalıştır. 
+  //Aynı komutu buradan da verebiliriz. 
+  setTimeout(() => {
+    body.style.backgroundColor = "#F4F4F4"
+  }, 4000); /* iki komut ardıardına çalışıyor.. */
+
+  // Varible : (function scope) çalışır.
+  // document üzerinde bir fonksiyon çağırıcaz.
+  // fonksiyonu parametre olarak id ismi verilecek
+  var getElementById = document.getElementById("html");
+  //32.satırda çağırdığımız elemenler gibi yeniden bir nitelik verilebilir.
+  getElementById.style.color ="#0000ff" //direkt olarak bir color stil tanımlandı
+  console.log(getElementById);
+  // CSS Color
+  /*document içerisinde  getElementById ile spesifik bir id(html) ye sahip
+   bir elementi seçtik.. dahasonra document içerisinde tanımlanan style objesini bulduk
+  */
+
+  // if(getElementById) { içerisine alarak} bu elementi koşullandırabiliriz.
+  var getElementById = document.getElementById("css");
+  getElementById.style.backgroundColor ="#dc143c" 
+
+  //Bir element ile alakalı tüm bilgier seçtiğimiz element içerisinde var.
+  console.groupCollapsed("getElementById()") //elementi açıp kapatmak / collapsed
+  console.log(getElementById);
+  console.dir(getElementById); //elementi propertylerini görebilmek için
+  console.groupEnd();
+  
+  var elementsByClassName = document.getElementsByClassName("course");
+//sınıflara sahip elementi seçmek.
+  console.groupCollapsed("getElementsByClassName()")
+  console.log(elementsByClassName);
+  console.groupEnd(elementsByClassName);
+
+  // istediğimiz bir elementi tagname ile seçebiliriz
+  var elementsByTagName = document.getElementsByTagName("p");
+
+  console.groupCollapsed("getElementsByTagName()")
+  console.log(elementsByTagName);
+  console.groupEnd(elementsByTagName);
+  
+  
+  var querySelector = document.querySelector(".course");
+  
+  //Bulduğu ilk elementi console da döndürür.
+  console.groupCollapsed("querySelector()")
+  console.log(querySelector);
+  console.groupEnd(querySelector);
+  
+  
+  var querySelectorAll = document.querySelectorAll(".course");
+  // Belirlediğimiz bir element ile ilgili tüm listeleride ( ul > .course) ile çağırabiliriz.
+
+  //Bulduğu ilgili elementi console da döndürür.
+  // karmaşık koşullarda birden fazla element için All ile seçebiliriz.
+  console.groupCollapsed("querySelectorAll()")
+  console.log(querySelectorAll);
+  console.groupEnd(querySelector);
+
+
+
+</script>
+
+  <!-- 
+  
+-- DOM, web sayfasının tüm öğelerini (elementler), niteliklerini (attributes) ve
+ içeriklerini (text content) bir hiyerarşi içinde temsil eder.
+-- JavaScript kullanarak sayfa içindeki HTML elementlerine erişebilir,
+ onları değiştirebilir, silebilir ya da yeni elementler ekleyebilirsiniz.
+-->
+
+
+<!-- 
+ 
+! document.getElementById(): Belirli bir id ile öğe seçer.
+! document.getElementsByClassName(): Belirli bir class ile öğeleri seçer.
+! document.getElementsByTagName(): Belirli bir HTML etiketi ile öğeleri seçer.
+! document.querySelector() ve document.querySelectorAll(): CSS seçicileri ile öğeleri seçer.
+-->
+
+<!-- 
+
+DOM Yapısını Değiştirmek DOM
+sayfayı dinamik olarak güncellemenize olanak tanır.
+
+? ******************
+! Yeni HTML elementleri oluşturabilir (document.createElement()).
+! Var olan elementlere çocuk (child) elementler ekleyebilir (appendChild()).
+! Var olan elementleri kaldırabilir (removeChild()).
+
+-->
+
+<!-- 
+ 
+! Olay Yönetimi (Event Handling) DOM, sayfa üzerinde kullanıcı etkileşimlerini 
+yakalamak için olay dinleyicilerini (event listeners) kullanır.
+
+
+!! html için kod bloğu örneği.
+<button id="myButton">Tıkla</button>
+
+<script>
+  const button = document.getElementById("myButton");
+  button.addEventListener("click", function() {
+    alert("Düğmeye tıkladınız!");
+  });
+</script>
+!! kullanıcı düğmeye tıkladığında bir uyarı penceresi görüntülenir.
+-->
+
+<!-- 
+ 
+Stil ve Sınıf Yönetimi 
+
+! element.style: Belirli bir elementin stilini doğrudan değiştirmek için kullanılır.
+! element.classList: Sınıfları eklemek, kaldırmak veya değiştirmek için kullanılır.
+-->
+<!--  *********** setAttribute-dataset *************
+  -- setAttribute("id", "custom-id"): Bir HTML elementine id gibi standart bir özellik 
+    eklemek veya güncellemek için kullanılır.
+  -- id gibi standart nitelikler, tarayıcı tarafından doğrudan işlenir ve elementlerin 
+    seçilmesinde veya stillendirilmesinde kullanılır.
+  -- setAttribute(): HTML standart niteliklerini değiştirmek veya eklemek için (örneğin, id, class, src).
+
+
+  -- dataset.uuid = "custom-id": HTML elementine özel veri (data-* formatında) 
+    eklemek için kullanılır.
+  -- data-* nitelikleri, özel veri saklama amacı taşır ve tarayıcı tarafından doğrudan işlenmez.
+    Uygulama düzeyinde veri taşımak veya izlemek için kullanılır.
+  -- dataset: Geliştirici tarafından tanımlanmış, veriyi depolamak veya izlemek için kullanılan data-* nitelikleri.
+
+
+-->
+
+
+</body>
+</html>

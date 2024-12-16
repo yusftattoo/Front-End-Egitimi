@@ -1,0 +1,252 @@
+/*  Dispaly-flex / Grid: bir öğenin nasıl görüneceğini belirttiğimiz etikettir.
+ Gripd: (satır sutün ) Bir düzen oluşturmak için kullanıyoruz.
+ Yatay ve Dikey eksende düzenleme yapmamızı sağlar.
+ Karmaşık düzen oluşturmamızı ve yönetilmesini kolaylaştırır.
+
+ Grid - template colums 
+ gripd - template - rows
+ Tanımlı olduğu sütun (ata kapsayıcısı) içerisinde sutün  
+ satır sayılarını ve boyutlarını tanımlamamızı sağlar.
+
+ frips-template-colum:1fd 2fr;
+ ( ikis ütun için: birincisine birbirim ikinicisine 2 birim olacağını tanımlar)
+
+ grid-column     / grid-row
+ Grid tanımlamalarının hangi sutün ve  hangi satır içerisinde 
+ yer alacağını belirlediğimiz yerdir.
+ grid-column:1/3 (öğre  1.sutündan 3. sutüne kadar uzanır. )
+  grid-gap; 
+  stuların ve satırların arasında ki boşluğu tanımlar.
+
+  Flex::
+   bir boyutlu ( satır ve sütun ) düzen oluşturmak için kullanıyorum.
+
+   Flexbox : öğelerin hizalanmasını ve hizanlanan öğelerin 
+   boşluklarının yönetilmesini kolaylaştırır.
+   Öğelerin büyümesi küçülmesi / füzenlenmesini kontrol ederiz. 
+
+   flex-direction
+   Flex container'ın içerisinde öğelerin anaekranda nasıl
+    bir düzenleneceğini belirleriz
+
+   flex-wrap: ögelerin sarmalanıp ve sarmalanmayağını belirler.
+    Flexbox kullanırken flex konteyner içindeki öğelerin bir satıra
+     (veya sütuna) sığmadığında nasıl sarılacağını (wrap) kontrol etmek için kullanılır.
+     Varsayılan olarak, Flexbox tüm öğeleri tek bir satırda tutmaya çalışır; 
+     ancak flex-wrap ile bu davranışı değiştirebilir ve öğelerin
+     yeni bir satıra (veya sütuna) geçmesini sağlayabilirsiniz.
+
+justify-content: flex ögelerin anaeksende nasıl hizalanacağını belirleriz.
+
+align-item:   Flex container içerisindeki ögelerinz çapraz ( dikey) 
+eksende nasıl hizalanması gerektiğini soyleriz. / center flex-start strecth/
+
+background:url():
+ 
+cursor
+fare imleci ile birlikçe işaretçinin görünümü değişiyor.
+cursor:pointer: imlec/etiket tıklanabilir hale geliyor.
+
+
+grid-template-colums:repeat(auto-fill, minmax(200px,1fr)):
+Belirli bir desenin otomatk olarak tekrar edilmesini sağlar.
+auto-fill;mümkün olan (ekran pixel değeri) en fazla sayıda 
+sütunun yerleştirilmesini sağlıyoruz.
+container ın genişliğine göre otomatik olarak coğaltılmasını sağlar.
+
+minmax (200px,1fr)): her sutünun en az 200px olması
+1fr: sutünlarin mevcut alandaki dağılımını eşit olarak sağlar.  
+
+
+*/
+body {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 20px;
+    background-color: rgb(219, 218, 212);
+  
+   
+}
+/* display: grid
+İki Boyutlu Düzenleme: Grid sistemi, öğeleri hem satır hem de sütun 
+düzleminde düzenlemek için tasarlanmıştır. 
+kullanldığında ekran küçüldüğünde kutular alt satıra otomatik hizlanaıyor 
+fakat elementlere belirli bir px verildiği için küçülme sağlamıyor,
+ekran daha fazla küçülmüyor.
+Tek Boyutlu Düzenleme: Flexbox, öğeleri tek bir eksende (yatay veya dikey)
+ düzenlemek için tasarlanmıştır. 
+ kullanılığında ekranda ögeleri sadece yanyana hizalıyor alt satıra geçmiyor*/
+ /* inline-block yaparsak altatına kutular küçük olarak hizalanır.
+ block yaparsak altalta hizalanır ve  bulunduğu saıtır kapsar */
+ /* Grid ile kart dizme */
+.grid1-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(200px,1fr));
+    background-color: lightcyan;
+    gap: 10px;
+    border-radius: 20%;
+}
+.card1{
+    background-color: rgb(243, 200, 243);
+    border: 1px solid rgb(230, 110, 130);
+    padding: 20px;
+    text-align: center;
+    border-radius: 8px;
+}
+/* ******************************************************** */
+/* FLex ile  kart dizme -----  content-box */
+.flex2-container{
+    display: flex;
+    /*s.between: kendi arasındaki boşluğu eşit versin,
+     elementler kendini her zaman ekrana sığdırır
+     ekran boyutu ne olursa olsun alt satıra inmez. */
+    justify-content: space-between; 
+    gap: 10px;
+    padding: 10px;
+
+}
+.card2 {
+    background-color:aquamarine     ;
+    border: 2px solid gray;
+    padding: 20px;
+    text-align: center;
+    border-radius: 8px;
+    flex: 1; /* vermemizin nedeni aradaki boşlukları kapatması 
+    ekran bouyutu değiştiğinde bozulma yapmasın*/
+}
+
+/* flex iile 3 lü content */
+
+
+
+.flex3-container {
+    display:flex;
+    justify-content: space-between;
+    /* kendi arasındaki boşluğu eşit versin */
+    gap: 10px;
+    padding: 10px;
+
+}
+.card3 {
+    background-color: lemonchiffon;
+    border: 2px solid grey;
+    padding: 20px;
+    text-align: center;
+    border-radius: 5px;
+    flex: 1;
+}
+ /* 10dk ara sonrası
+ Flex ile Hero css */
+.hero-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   height: auto;
+   background-color: url('/ms-icon-310x310.png') no-repeat center center/cover ;
+   /* resmi koyduktan sonra: tekrar etmemesi için norepeat-kartın içine koy bu resmi - ortala - ve o alanı kapla */
+   
+   background-size: auto ;
+}
+.hero-content {
+background-color: rgb(235, 235, 141);border: 1px solid floralwhite;
+padding: 20px;
+color: rgb(2, 25, 46);
+text-align: center;
+border-radius: 8px;
+
+}
+button{ 
+    background-color: aquamarine;
+    border: none;
+    color: floralwhite;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;   
+}
+.button:hover{
+    background-color: indianred;
+}
+.hero5-grid {
+    display: grid;
+    place-items: center;
+    height: 10vh;
+    background: url() no-repeat center center/cover;
+    background-size: auto;
+}
+.hero-content{
+    text-align: center;
+    color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+}
+.color {
+    color: gray;
+}
+/* Flex ile Navbar CSS */
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: hotpink;
+    color: #fff;
+
+}
+.logo{
+    font-size: 24px;
+}
+
+.nav-links{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+/* Card Tasarımı */
+.card7{
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 40px 20px red;
+    max-width: 300px;
+    overflow: hidden;
+    text-align: center;
+    transition: transform 1s;
+}
+.card:hover {
+    transform: scale(1.05);
+
+}
+.card-img{
+    width: 100px;
+    height: auto;
+}
+.card-body{
+    padding: 20px;
+
+}
+.card-title{
+    margin: 0 0 20px;
+    font-size: 22px;
+    color: #333;
+
+}
+.card-text{
+    margin:  0 0 20px;
+    font-size: 14px;
+    color: #666;
+
+}
+.card-btn{
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 20px;
+    font-size: 20px;
+    color: #fff;
+    background-color: darkcyan;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 1s;
+}
+.card-btn:hover{
+    background-color: orchid;
+}

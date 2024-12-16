@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        console.log(window);
+        // js ile erişmek istediğimiz bir sınıftan yaralanıp değişiklik yapabilriz. 
+        console.groupCollapsed("Window Screen");
+        //ekran hakkında bilgi almak.
+        console.log(window.screen);
+        
+        //ekran bilgisini kullanmak
+        console.log("screen.width", screen.width)
+        console.log("screen.height", screen.height)
+        console.groupEnd();
+        
+        // ***********************************************************
+        
+        console.groupCollapsed("Window Location");
+        console.log(location);
+        
+        console.log("Location.origin", location.origin);
+        console.log("Location.pathname", location.pathname);
+        console.log("Location.href", location.href);
+        console.groupEnd();
+      
+      
+      
+        console.groupCollapsed("Window Location");
+        console.log(navigator);
+        console.log("navigator.useragent", navigator.userAgent);
+        console.log("navigator.vendor", navigator.vendor);
+        console.groupEnd();
+
+        // JS Timing Events
+        // sadece bir sefer tanımlanan süre sonrasında çalışır
+        setTimeout(function(){
+            console.log("setTimeout");
+        }, 2000);// 2 saniyesonra console a yansıyor.
+
+        // belirli süre ile istediğimiz miktarda çalışmasını istersek
+        
+        // var count =0;
+        // var interval = setInterval(function (){
+        //     if (count ===5) {
+        //         clearInterval(interval)
+        //     } else {
+        //         count = count +1;
+        //         console.log("serInterval", count);
+        //     }
+        // }, 300);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+
+
+    <pre>    <strong>BOM (Browser Object Model)</strong>      web sayfasının tarayıcıyla ilişkili kısımlarını yönetir, yani tarayıcı
+         penceresini ve onun özelliklerini kontrol etmek için kullanılır. Bu model, sayfa içeriğinden (DOM'dan) ziyade,
+         tarayıcıyla ilgili bilgilere ve işlemlere erişimi sağlar.</pre>
+    <pre>
+        window Nesnesi: BOM'un en önemli parçası window nesnesidir. <br>
+        alert("Bu bir uyarı mesajıdır!");  // window.alert() ile aynı işlemi yapar
+    </pre>
+    <pre>
+        navigator nesnesi, kullanıcının tarayıcısı kendisi hakkında bilgi sağlar. 
+        tarayıcının ismi, sürümü, çevrimiçi olup olmadığı
+        <!-- console.log(navigator.userAgent);  // Kullanıcının tarayıcı bilgilerini döndürür
+        console.log(navigator.language);   // Kullanıcının dil tercihini döndürür -->
+    </pre>
+    <pre>
+        location nesnesi, tarayıcının URL'sini temsil eder.
+        <!-- 
+        console.log(window.location.href);  // Mevcut sayfanın URL'sini döndürür
+        window.location.href = "https://www.example.com";  // Farklı bir sayfaya yönlendirir-->
+    </pre>
+
+    <pre>
+        history nesnesi, kullanıcının tarayıcı geçmişine erişim sağlar. 
+        arasında ileri ve geri gitme işlemlerini yönetebiliriz.
+        <!-- window.history.back();   // Kullanıcının bir önceki sayfaya dönmesini sağlar
+        window.history.forward();  // Kullanıcının bir sonraki sayfaya gitmesini sağlar -->
+    </pre>
+    <pre>
+        screen nesnesi, kullanıcının ekranı hakkında bilgi sağlar.
+        <!-- console.log(screen.width);  // Kullanıcının ekran genişliğini döndürür
+        console.log(screen.height); // Kullanıcının ekran yüksekliğini döndürür -->
+    </pre>
+    <pre>
+        alert(), confirm(), prompt() Fonksiyonları: Tarayıcıya özgü bu fonksiyonlar uyarı mesajları,
+         kullanıcı onayları veya veri girişi almak için kullanılır.
+        <!-- alert("Bu bir uyarıdır!");
+        const onay = confirm("Emin misiniz?");
+        const isim = prompt("Adınızı girin:"); -->
+    </pre>
+    <pre>
+        setTimeout(): Belirli bir süre sonra bir işlevi çalıştırır.
+        setInterval(): Belirli aralıklarla bir işlevi tekrar tekrar çalıştırır.
+        <!-- setTimeout(() => {
+        console.log("Bu mesaj 3 saniye sonra görünür.");
+        }, 3000);
+
+        const interval = setInterval(() => {
+        console.log("Bu mesaj her 2 saniyede bir görünür.");
+        }, 2000); -->
+    </pre>
+    <pre>
+        <strong>DOM (Document Object Model):</strong> Web sayfasının içeriğini ve 
+        yapısını temsil eder. HTML ve XML belgelerinin öğelerine
+        erişmenizi ve bu öğeleri değiştirmenizi sağlar.
+        <strong>BOM (Browser Object Model):</strong>JavaScript'teki BOM, tarayıcıyla etkileşim kurmanızı sağlayan nesne modelidir.
+        Tarayıcıyla ilgili tüm özelliklere erişim sağlar. Tarayıcı penceresi,
+         URL, geçmiş, ekran bilgileri gibi konular BOM'un alanına girer.
+    </pre>
+</body>
+</html>

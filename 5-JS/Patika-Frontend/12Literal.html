@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   
+    <script src="12literal.js">
+        const ogrenci = {
+  adi: 'Ali',
+  sinif: '9/A',
+  dersi: 'Matematik',
+  notu: 90
+}
+
+
+const test = `
+<div class="person">
+ <h2>
+     ${ogrenci.adi}
+ </h2>
+  <p style="color:blue">${ogrenci.sinif}</p>
+  <p style="color:blue">${ogrenci.dersi}</p>
+  <p class="notu">${ogrenci.notu}</p>
+</div>
+`;
+
+document.body.innerHTML = test;
+
+    </script>
+    <script ></script>
+</body>
+</html>

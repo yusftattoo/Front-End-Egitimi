@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="portfol.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<!-- BOOTSTRAP LINKER -->
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
+
+<!-- fonts -->
+<!-- <link rel="preconnect" href="https://fonts.gstatic.com"> -->
+
+<!-- <link href="https://fonts.googleapis.com/css2?family=Bungee+Outline&display=swap" rel="stylesheet"> -->
+<title>Porfolio Website</title>
+</head>
+<body >
+ <!-- NAVBAR -->
+    <header class="header">
+        <a href="#" class="logo">Porfolio</a>
+        <input type="checkbox" class="menu-btn" id="menu-btn">
+        <label for="menu-btn" class="menu-icon">
+            <i class="fa-solid fa-bars menu-hmbgr"></i>
+        </label>
+        <nav class="navbar">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#services">Services</a>
+            <a href="#portfolio">Portfolio</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+<!-- HOME -->
+    <section class="home" id="home">
+        <div class="home-content">
+            <h2>Hello Bro!!</h2>
+            <h1>I'm Yusuf Kayabaşı</h1>
+            <h3>and I'm    <!--Efekt inline - style eklencek ve eklenmeyecek yerleri ayırılıyor -->
+                <span class="home-span">
+                    <span class="frontend-span"> 
+                        Your
+                    </span>
+                    <span class="backend-span">
+                        Tattoo
+                    </span>
+                    <span class="fullstack-span">
+                        Artist
+                    </span> <br>
+                    <span class="last-span">
+                        Developer
+                    </span>
+                </span>
+            </h3>
+            <p>Lorem ipsum dolor sit amet.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. <br>
+                Tempore repellendus consequatur dolor. Eius pariatur.
+            </p>
+            <div class="social-links">
+                <a href="#"> <i class="fa-brands fa-github"></i></a>
+                <a href="#"> <i class="fa-brands fa-linkedin"></i></a>
+                <a href="#" class="cv-btn"> <i class="fa-solid fa-newspaper"></i></a>
+            </div>
+    
+        </div>
+        <div class="home-img">
+            <img src="img/pngegg.png" alt="Profile Picture">
+            <div class="home-img-clip"></div>
+        </div>
+    </section>
+    <!-- 
+    root(): CSS değişkenlerini birden fazla yerde / tekrar tekrar kullanım merkezi olarak stil belirlendi
+    --bg-color, --second-bg-color
+    
+    clip-path:polyn(20% 15% 100% 70% 0  70% )
+    20% 15% üst sol köşe
+    80-16: üst sağ köşe
+    100-70:alt sağ köşe
+    0-70: alt sol köşe
+
+    display: inline flex: 
+    inline:eleman, diğer inline etiketlerler yanyana gelir
+    flex: kendisi container oluyor içerisindeki alt elemenlarına esnek düzenlenmesini sağlıyor.
+    rem ve px: 
+    px: ekran çözünlürlüğü ve boyutlandırma birimleri.
+    rem: Mutlak elemenın boyutuna göre ölcülendirme yapar. Elementin yazı tipi boyunu bizlere verir.
+    1rem = 16px
+    2rem= 32px
+    
+    border-radius: kenar yuvarlama 
+    Diğer kullanımı:        border-radius: 10% 25% 70% 47% / 90% 75% 30% 
+    ilk grup ( köşe yarı çapları). üst sol, üst sağ, alt sol, alt sağ
+    ikinci grup ( elips şeklinde border raidus   -->
+
+    <!-- About Start  -->
+    
+    
+    <section class="about" id="about">
+        <div class="about-img">
+            <img src="img/pngegg2.png" alt="Profile.img">
+        </div>
+        <div class="about-content">
+            <h2 class="heading">About <span class="about-span">Me</span></h2>
+            <h3>Tattoo Artist</h3>
+            <p>
+                <span>
+                    Lorem ipsum dolor sit a
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati ullam, itaque fugiat quos soluta quis odit commodi hic 
+                    inventore et magnam doloremque vel consectetur culpa molestias consequuntur. Numquam 
+                    officia cumque, aspernatur, quasi vero voluptatem quos 
+                    consequuntur dolores nemo maxime illum? met consectetur adipisicing elit. Animi, delectus. Lorem, ipsum dolor sit amet 
+                    consectetur adipisicing elit. Eum, perferendis ipsam labore voluptates sed quod!
+                </span>
+            </p>
+            <a href="#" class="about-btn">More About me</a>
+        </div>
+    </section>
+    
+    
+    <!-- About End  -->
+<!-- SERVICES START -->
+<section class="services" id="services">
+    <h2 class="heading">Our <span class="services-span">Services</span></h2>
+    <div class="services-container">
+        <div class="services-box">
+            <i class="fa-solid fa-laptop-code"></i>
+            <h3>Web Design</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.Lorem ipsum dolor sit
+                amet consectetur adipisicing elit. Quisquam, voluptatum.Lorem ipsum dolor sit amet consectetur
+                adipisicing elit. Quisquam, voluptatum.</p>
+            <a href="#" class="services-btn">Read More</a>
+        </div>
+        <div class="services-box">
+            <i class="fa-solid fa-code"></i>
+            <h3>Web Development</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.Lorem ipsum dolor sit
+                amet consectetur adipisicing elit. Quisquam, voluptatum.Lorem ipsum dolor sit amet consectetur
+                adipisicing elit. Quisquam, voluptatum.</p>
+            <a href="#" class="services-btn">Read More</a>
+        </div>
+        <div class="services-box">
+            <i class="fa-solid fa-mobile"></i>
+            <h3>Responsive Design</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.Lorem ipsum dolor sit
+                amet consectetur adipisicing elit. Quisquam, voluptatum.Lorem ipsum dolor sit amet consectetur
+                adipisicing elit. Quisquam, voluptatum.</p>
+            <a href="#" class="services-btn">Read More</a>
+        </div>
+    </div>
+</section>
+<!-- Services End -->
+ <!-- Portfolio start -->
+  <!-- 
+    @keyframes animete-text to{
+    background-size:100%;
+    }
+    @keyframes: animasyon tanımlaması yapacağımızı soyleriz, ekranda ki kapsayıcı kısmı belirtir.
+    100%: animsyon olarak kapsayıcı olacak genişlik v yükseklik
+ 
+    grid-template-colums:repeat(3,1fr): üç eşit genişlikte sütun oluşturuyor.1fr genişliğinde 3 eşit sütuna bölüyor.
+
+    aspect-ratio:4/3; ögenin yüksekliğinin ve genişliğinini 3/4 kadar olmasını belirtir.
+    kapsayıcı ve öge arasındaki alan için.
+
+
+    transform:translateY(-100%): ögenin üzerine gelidğimizde reaksiyona girsin ve kendini -100% olacak şekilde hareket ettirsin.
+    Y ekseninde yapılıyor dikeyde hareket etmesi için, X ekseni yatar hareket verir. x-y-z olarak değişiyor.
+
+    transform:trasnlate(0); ögeyi kenid tanımlı ekseninde konumlandırır.
+
+    box-shadow: 0 0 1rem var (--bg-color):  
+    0:yatay 0: dikey 1rem: gelgenin bulanıklılığını belirtir. var: gölgenin rengini belirtir.
+    
+
+
+  -->
+
+<section class="portfolio" id="portfolio">
+    <h2 class="heading"> My <span class="portfolio-span"> Project</span></h2>
+    <div class="portfolio-container">
+        <div class="portfolio-box">
+            <img src="img/pngseri1.png" alt="Project Screenshot">
+            <div class="portfolio-layer">
+                <h4>project</h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+                <a href="#"> <i class="fa-solid fa-link"></i></a>
+            </div>
+        </div>
+        <div class="portfolio-box">
+            <img src="img/pngeseri2.png" alt="Project Screenshot">
+            <div class="portfolio-layer">
+                <h4>project</h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+                <a href="#"> <i class="fa-solid fa-link"></i></a>
+            </div>
+        </div>
+        <div class="portfolio-box">
+            <img src="img/pngeseri3.png" alt="Project Screenshot">
+            <div class="portfolio-layer">
+                <h4>project</h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+                <a href="#"> <i class="fa-solid fa-link"></i></a>
+            </div>
+        </div>
+        <div class="portfolio-box"> <!-- yeni eklendi-->
+            <img src="img/pngeseri4.png" alt="Project Screenshot">
+            <div class="portfolio-layer">
+                <h4>project</h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+                <a href="#"> <i class="fa-solid fa-link"></i></a>
+            </div>
+        </div>
+        <div class="portfolio-box">
+            <img src="img/pngeseri5.png" alt="Project Screenshot">
+            <div class="portfolio-layer">
+                <h4>project</h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+                <a href="#"> <i class="fa-solid fa-link"></i></a>
+            </div>
+        </div>
+        <div class="portfolio-box">
+            <img src="img/pngeseri6.png" alt="Project Screenshot">
+            <div class="portfolio-layer">
+                <h4>project</h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+                <a href="#"> <i class="fa-solid fa-link"></i></a>
+            </div>
+        </div>
+        <div class="portfolio-box">
+            <img src="img/pngeseri7.png" alt="Project Screenshot">
+            <div class="portfolio-layer">
+                <h4>project</h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+                <a href="#"> <i class="fa-solid fa-link"></i></a>
+            </div>
+        </div>
+        <div class="portfolio-box">
+            <img src="img/pngeseri88.png" alt="Project Screenshot">
+            <div class="portfolio-layer">
+                <h4>project</h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+                <a href="#"> <i class="fa-solid fa-link"></i></a>
+            </div>
+        </div>
+        <div class="portfolio-box"> <!-- yeni eklendi-->
+            <img src="img/pngeseri8.png" alt="Project Screenshot">
+            <div class="portfolio-layer">
+                <h4>project</h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+                <a href="#"> <i class="fa-solid fa-link"></i></a>
+            </div>
+        </div>
+        <div class="portfolio-box">
+            <img src="img/pngeseri9.png" alt="Project Screenshot">
+            <div class="portfolio-layer">
+                <h4>project</h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+                <a href="#"> <i class="fa-solid fa-link"></i></a>
+            </div>
+        </div>
+        <div class="portfolio-box">
+            <img src="img/pngeseri10.png" alt="Project Screenshot">
+            <div class="portfolio-layer">
+                <h4>project</h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+                <a href="#"> <i class="fa-solid fa-link"></i></a>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- portflio End -->
+<!-- Contatct start -->
+<section class="contact" id="contact">
+    <h2 class="heading">Contact <span class="portfolio-span"> Me</span></h2>
+        <form action="#">
+            <div class="input-div">
+                <input type="text" placeholder="Name">
+                <input type="email" placeholder="Email">
+            </div>
+            <div class="input-div">
+                <input type="number" placeholder="Phone Number">
+                <input type="email" placeholder="Subject">
+            </div>
+            <textarea name="" id="" cols="30" rows="10" placeholder="Message"></textarea>
+            <input type="submit" value="Send Mail" class="contact-btn">
+        </form>
+</section>
+<!-- Contatct End -->
+ <!-- Foother start -->
+  <footer class="footer">
+    <p>
+        Copyright <span class="footer-span"> &copy; </span> 2024 Yusuf Kayabaşı | All Rights Reserved
+    </p>
+    <div class="footer-icon-top">
+        <a href="#home"> <i class="fa-solid fo-arrow-up"></i></a>
+    </div>
+  </footer>
+   <!-- Foother end -->
+</body>
+</html>

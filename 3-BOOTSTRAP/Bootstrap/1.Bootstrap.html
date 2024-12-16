@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+
+    <title>Hello,</title>
+  </head>
+  <body>
+      
+      <main class="container">
+          <div class="row">
+              <section class="col-sm-8">
+                  <article class="row mt-5"><!-- clas row ile 8 lik kısmın içnde 12 lik yapı açılmış oldu -->
+                        <div class="col-sm-8">
+                            <h3>Lorem, ipsum dolor.</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio unde magnam beatae omnis corporis nemo?ntore?</p>
+                        </div>
+                        <div class="col-sm-4"> 
+                            <img class="w-100 img-thumbnail" src="https://picsum.photos/400/300" alt="loremresim">
+                        </div>
+                    </article>
+                  <article class="row mt-4"><!-- clas row ile 8 lik kısmın içnde 12 lik yapı açılmış oldu -->
+                    <!--mt-4 =margin-top bosluk-->
+                        <div class="col-sm-8">
+                            <h3>Lorem, ipsum dolor.</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio unde magnam beatae omnis corporis nemo?ntore?</p>
+                        </div>
+                        <div class="col-sm-4">
+                            <img class="w-100 img-thumbnail" src="https://picsum.photos/id/22/400/300" alt="loremresim">
+                        </div>
+                    </article>
+                  <article class="row mt-3"><!-- clas row ile 8 lik kısmın içnde 12 lik yapı açılmış oldu -->
+                        <div class="col-sm-8">
+                            <h3>Lorem, ipsum dolor.</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio unde magnam beatae omnis corporis nemo?ntore?</p>
+                        </div>
+                        <div class="col-sm-4">
+                            <img class="w-100 img-thumbnail" src="https://picsum.photos/id/34/400/300" alt="loremresim">
+                        </div>
+                    </article>
+               
+            </section>
+            <aside class="col-sm-4 bg-secondary"> <!-- navigasyon-->
+                <ul>
+                    <li>Lorem, ipsum dolor.</li>
+                    <li>Nihil, fugit velit!</li>
+                    <li>Iure, impedit minus!</li>
+                    <li>Quam, delectus nam!</li>
+                </ul>
+            </aside>
+        </div>
+    </main>
+    <div class="row">
+        <div class="col-4 mr-auto  bg-secondary">4 Column</div> <!--mr: margin right (sağından boşluk bırak)-->
+        <div class="col-5  bg-dark">5 Column</div> 
+      </div>
+      
+      <div class="row">
+        <div class="col-4 bg-danger">2 Column</div>
+        <div class="col-5 ml-auto bg-warning">3 Column</div> <!--ml: margin left (solundan boşluk bırak)-->
+      </div>
+    <!-- <div> 
+     <div class="container">
+         <div class="row ">
+           <div class="col bg-danger">
+             1 of 2
+           </div>
+           <div class="col bg-secondary">
+             2 of 2
+           </div>
+         </div>
+         <div class="row ">
+           <div class="col bg-warning">
+             1 of 3
+           </div>
+           <div class="col bg-succes">
+             2 of 3
+           </div>
+           <div class="col bg-info">
+             3 of 3
+           </div>
+         </div>
+       </div>
+       <div style="height: 200px;"></div>
+     <div>
+         <pre>
+             Eşit Kolonlar
+ Eşit kolonlu tasarım için;
+ 
+ 12 adet 1'er kolon (.col-[sınıfAdı]-1)
+ 6 adet 2'li kolon (.col-[sınıfAdı]-2)
+ 4 adet 3'lü kolon (.col-[sınıfAdı]-3)
+ 3 adet 4'lü kolon (.col-[sınıfAdı]-4)
+ 2 adet 6'lı kolon (.col-[sınıfAdı]-6)
+ 1 adet 12'li kolon (.col-[sınıfAdı]-12) oluşturulabilir.
+ Ya da col sınıfına sahip element sayısına göre (Örneğin; 3 adet .col sınıfı olan elementler 3 adet kolon oluşturur) otomatik olarak eşit kolonlara bölünebilir.
+         </pre>
+         <pre>
+             Eşit Olmayan Kolonlar
+ Kolon sayılarının 12'ye tamamlanma zorunluluğu yoktur. Tasarıma göre istenilen sayıda kolonlar oluşturulabilir ve istenilen yerlerde boşluk bırakılabilir.
+ 
+ 1 adet 2'li kolon (.col-[sınıfAdı]-2) ile 1 adet 10'lu kolon (.col-[sınıfAdı]-10) ya da 1 adet 8'li kolon (.col-[sınıfAdı]-8) ile 1 adet 4'lü kolon (.col-[sınıfAdı]-4) 12'ye tamamlanabilir.
+ Tek bir adet 8'li kolon (.col-[sınıfAdı]-8), tek bir adet 6'lı kolon (.col-[sınıfAdı]-6) ya da 1 adet 4'lü kolon (.col-[sınıfAdı]-4) ile 1 adet 5'li kolon (.col-[sınıfAdı]-5) kolon 12'ye tamamlanmadan bıraklabilir. Böylece eksik bırakılan kolon değeri kadar yan tarafta boşluk kalmış olur.
+ 
+ Verilen kolon değerlerinin toplamı 12'den fazla olması durumunda son kolon bloğu bozmayacağı için alt tarafa geçer. Örnek olarak;
+ 
+ 1 adet 8'li kolondan sonra 1 adet 6'lı kolon değeri verilir ise 8 + 6 = 14 toplam kolon sayısı 12'den büyük olacağı için 6'lı kolon 8'li kolonun altına geçer.
+ 
+ Kolonların arasında da boşluk bırakmak mümkün. Bunun için col sınıfının yanına öntanımlı margin ve margin yönünü (ml-auto gibi) belirten bir sınıf adı daha eklenmelidir. Kolonun solunda boşluk bırakmak için margin (m) left (l) yani ml-auto sınıfı eklemeli, aynı şekilde sağ tarfında boşluk bırakılmak istenirse margin (m) right (r) yani mr-auto sınıfı eklemelidir.
+ 
+ Örneğin; col-4 mr-auto sınıfı olan bir kolonun sağ tarafında, col-4 ml-auto sınıfı ise kolonun solunda boşluk bırakır.
+         </pre>
+         <pre>
+             Kolonların Sıralanması
+ Öntanımlı order-[sıra numarası] sınıfını ekleyerek kolonları sıralayabiliriz.
+ 
+ Örneğin; col-3 order-3 üç kolonluk bölümü üçüncü sıraya yerleştirecektir.
+         </pre>
+         <pre>
+             İç İçe Izgara sistemi
+ Bir satırdaki (row) kolonun (col) içine başka bir satır eklenerek yine kolonlara bölünebilir.
+ 
+ Örneğin; 4'lük bir kolon (.col-[sınıfAdı]-4) ile 8'lik bir kolondan (.col-[sınıfAdı]-8) oluşan satırdaki 8'lik kolonun içinde yeni bir satır (row) eklenerek 2 adet 6'lık kolon (.col-[sınıfAdı]-6) oluşturulabilir.
+         </pre>
+     </div>
+ 
+     
+     <div class="containe">
+         <div class="row">
+             <div class="col-sm-6 col-lg-3 col-xl-2 bg-primary">Lorem, ipsum.</div>
+             <div class="col-sm-6 col-lg-3 col-xl-2 bg-danger">Lorem, ipsum.</div>
+             <div class="col-sm-6 col-lg-3 col-xl-2 bg-info">Lorem, ipsum.</div>
+             <div class="col-sm-6 col-lg-3 col-xl-2 bg-seccess">Lorem, ipsum.</div>
+             <div class="col-sm-6 col-lg-3 col-xl-2 bg-secondary">Lorem, ipsum.</div>
+             <div class="col-sm-6 col-lg-3 col-xl-2 bg-warning">Lorem, ipsum.</div>
+         </div>
+     </div>
+    </div> -->
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js" integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous"></script>
+    -->
+  </body>
+</html>

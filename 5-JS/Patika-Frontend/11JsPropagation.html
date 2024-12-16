@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            margin-top: 2px;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        #div1,#div8{
+            background-color: #999;
+        }
+        #div2, #div7{
+            background-color: #777;
+        }
+        #div3, #div6{
+            background-color: #555;
+        }
+        #div4{
+            background-color: #444;
+        }
+        #div5{
+            background-color: #333;
+        }
+    </style>
+</head>
+<body>
+    <h1>Js Event Propagation</h1>
+    <h2>Bubbling</h2>
+    <div id="div1">
+        <div id="div2">
+            <div id="div3">
+                <div id="div4">
+                    <div id="div5">
+                    </div> 
+                 </div> 
+            </div>
+        </div>
+    </div>
+    <div id="div6">
+        <div id="div7">
+            <div id="div8">
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // 3 adetdiv üst üste. engenişi 1.div orta 2.div küçük 3.div....
+        //divlerüst    üste olduğu için hangisine tıklarsak altındaki dive de tıklamış oluruz.
+        var div1 =document.getElementById("div1");
+        var div2 =document.getElementById("div2");
+        var div3 =document.getElementById("div3");
+        
+        var div4 =document.getElementById("div4");
+        var div5 =document.getElementById("div5");
+        var div6 =document.getElementById("div6");
+        var div7 =document.getElementById("div7");
+        var div8 =document.getElementById("div8");
+
+        div1.addEventListener("click", function(){
+            console.log("bubbling:1")
+        });
+
+        div2.addEventListener("click", function(){
+            console.log("bubbling:2")
+        });
+        // 33.satırda yapılan açıklaman üzerinden istediğimi div e tıklanmayı durdurabiliriz.
+        div3.addEventListener("click", function(){
+            console.log("bubbling:3")
+            //  event.stopImmediatePropagation();
+            // bu kod ile diğerlerini durdurduk..
+            // başka divlerin çalışması sorun oluşturursa bu eklendi kullanılır.
+        });
+        
+        
+        div4.addEventListener("click", function(){
+            console.log("bubbling:4-1") 
+            // istediğimiz eventin çalışma önceliğini belirleyebiliriz ve sonrasında bunlara koşul verebiliriz.
+            });
+        div5.addEventListener("click", function(){
+            console.log("bubbling:5-1") 
+            // kendi türündeki (4-1 / 4-2 ) evetnlerin çalışmasını durdurabiliriz.
+            });
+
+
+            // 2.div alanı. proje içerisinde hem alt hemde üste tanımlanmış clickler için hangisinin önce çalışması gerektiğine dair işlem sırası verilebilir.
+
+        div6.addEventListener("click", function(){
+            console.log("capturing:6")
+        }, true);
+
+        div7.addEventListener("click", function(){
+            console.log("capturing:7")
+        }, true)
+     
+        div8.addEventListener("click", function(){
+            console.log("capturing:8")
+        }, true);
+
+
+    </script>
+</body>
+</html>

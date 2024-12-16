@@ -1,0 +1,282 @@
+:root {
+    --primary-color: rgb(247, 115, 115);
+}
+*{
+    box-sizing: border-box;
+} /* butün elementlere uygulanma nedeni: verilen ekran ölçülendirmelerini kendisi otomatik yapsın*/
+body {
+    font-family: "Inter", sans-serif;
+    color: #282828;
+    background-color: rgb(236, 234, 234);
+} 
+p {
+    color: #494848;
+}
+.section{
+    padding: 8rem 0;
+
+}
+.section.white{
+    background-color: white;
+}
+.section-title{
+    font-size: 45px;
+    font-weight: 600;
+    letter-spacing: 0.5;
+    text-align: center;
+    line-height: 1;/* farklı başlıkların boyutları farklı olduğu için gerksiz boşlukların kapanması için 1 verildi*/
+    margin-top: 0;
+    margin-bottom: 2em;
+}
+.section-title::first-letter{
+    color: var(--primary-color)
+}
+
+
+
+.button{
+    min-width: 140px; /*buton boyutu*/
+    font-size: 15px;
+    color: aliceblue;
+    font-weight: 500; /*yazının kalın olması*/
+    line-height: 38px; /* satır yüksekliği*/
+    padding: 0 24px; /*yukarıdan ve aşağıdan 0 / sağ ve sol 24px */
+    text-align: center; /*button içersindeki metin ortada*/
+    background-color: #242222;
+    display: inline-block
+}
+.button:hover {
+    background-color: var(--primary-color); /*stil içinde tanımlı ortak değişken*/
+}
+a.button {
+    text-decoration: none;  /*a taglarında default olarak alt çizgi var onu silsin*/  
+    
+}
+  /**/
+    
+button .button{
+    cursor:pointer;  /*el işareti ççıksın*/
+    outline: 0;
+    border: 0;
+}
+
+/*HEADER*/
+#header {
+    position: relative;/* mobil menüyü referans alacağımız için burayı ayrı yapacaz*/
+    padding: 32px 0;
+    background-color:  white;
+    
+}
+ /*inline elementlerde 3px lik bir boşluk oluyor display*/
+#header .logo { /*bir altındaki öğenin hareketine göre hareketetmesi lazım*/
+    display: block;
+}
+#nav {
+     /* */
+    display: flex;
+    gap: 0 32px ; /*menu item larına ana boşluklar verildi*/
+    justify-content: end; /*elementleri tamamen saga dayıyor*/
+    align-items: center; /*butonu  nav elemenlerinden yüksek fakt aynı sırada, hizalanması için*/   
+}
+#nav .nav-item {
+    color: #000000;
+    padding: 2px; /*tıklama alanı genişlesin diye ufak bir büyütme*/
+    text-decoration: none; /*altındaki çizgileri kapatmak için*/
+    
+}
+#nav .nav-item:hover {
+    text-decoration: line-through;
+}
+
+#mobile-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    padding: 16px 0;
+    z-index: 10;
+    background-color: #000000;
+}
+#mobile-menu a{
+color: white;
+text-decoration: none;
+padding: 12px 24px;
+display: block;
+}
+#mobile-menu a:hover {
+    background-color: var(--primary-color);
+}
+#mobile-menu-button {
+    display: none;
+    margin-left: auto;
+}
+/*HERO*/
+
+.hero-caption {
+    max-width: 595px; /**/
+    padding: 8%;
+    margin-left: auto;
+     
+    /*mg-l i yi manuell yazdım */
+    /*sag a dayaması için, soldaki boşluğa göre otomatik asğ a dayıyor*/
+}
+.hero-caption h1{
+    font-size: 50px;
+    font-weight: 600;
+    letter-spacing: 2px; /* karakterleri arasına boşluk*/
+    margin: 0;
+}
+.hero-caption p{
+    font-size: 20px;
+    margin: 1.5em 0; /* 20px in 1.5 katı = 30 pixel boyutunlandırıldı, f-s- değiştirğinde bu da otomatik değişecek*/
+
+}
+.hero-image{
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/*HERO */
+
+#about {
+    max-width: 800px;
+    text-align: center;
+    margin:  auto;
+    padding: 0 16px;
+}
+
+#about h4 {
+    font-size: 32px;
+    font-weight: 600;
+    margin-top: -1.75em; /*alt başlığın boşluğunu değiştirmek için - yukarıda doğru  hareket için - verildi*/
+}
+
+#about p{
+    font-size: 18px;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/*BLOG*/
+
+.blog { 
+    margin: 8px 0; /*kartlarını yanyana gelmesi ve kenar boşlukları*/
+    background-color: white;
+    
+
+}
+.blog-content {
+    padding: 24px;
+}
+.blog img {
+    width: 100%;
+    height: auto;
+    display: block;
+    
+}
+
+.blog h3{
+    font-weight: 600;
+    margin: 0;
+    line-height: 1.45;
+}
+
+.blog p{
+    margin-top: 1em;
+    margin-bottom: 1.5em;
+    line-height: 1.45;
+}
+/*COMMENT*/
+.comment {
+    margin: 8px 0;
+    padding: 32px;
+    background-color: #c7c4c4;
+}
+.comment img   {
+    display: inline-block;
+    border-radius: 50%;
+
+}
+.comment h3{
+    font-weight: 500;
+    margin: 0 0 0 8px;
+    display: inline-block;
+}
+
+/*FOOTHER*/
+#footer {
+    padding: 40px 0;
+    text-align: center;
+    background-color: aliceblue;
+}
+
+@media(max-width: 1024px){ /*Tablet boyutlandırmas*/
+
+    .section {padding: 6rem 0;
+    }
+    .section-title {
+    font-size: 35px;
+    }
+    
+
+
+#header{
+    padding: 24px 0;
+    
+}}
+
+/*HERO*/ 
+ 
+.hero-caption h1{
+    font-size: 40px;
+}
+.hero-caption p{
+    font-size: 18px;
+}
+
+
+@media(max-width: 748px){ /*telefon boyutlandırması*/
+
+.section {padding: 4rem 0;
+}
+.section-title {
+font-size: 30px;
+margin-bottom: 1.5em;
+}
+
+    /*HEADER*/
+    #header{
+        padding: 16px 0;
+    }
+#nav {  /*yukarıdaki buton görüntülenirse ile normal ekran menusu gizlensin*/
+    display: none;
+}
+#mobile-menu-button { /*mobil ekrana geldiğinde bu butonu göster*/
+    display: block;
+}
+}
+
+/*HERO*/ 
+.hero-caption{
+    max-width: auto;
+    margin-left: 0;
+}
+.hero-caption h1{
+    font-size: 30px;
+}
+.hero-caption p{
+    font-size: 16px;
+}
+
+/*ABOUT*/
+#about h4 {
+    font-size: 24px;
+    margin-top: -1rem;
+}
+#about h1 {
+    font-size: 18px;
+    line-height: 1.6;
+
+   
+}

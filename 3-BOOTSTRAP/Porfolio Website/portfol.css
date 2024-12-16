@@ -1,0 +1,581 @@
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    font-family: "Exo 2, sans-serif";
+    
+}
+
+:root{
+    --bg-color: #333232;
+    --second-bg-color: #1e2124;
+    --text-color: #cacaca;
+    --main-color:#a21caf;
+    --yellow-color:#3f9edd;
+}
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+body{
+  background-color: var(--bg-color);
+  
+    /* background-color: var(--bg-color); */
+    color: var(--text-color);
+}
+section{
+    min-height: 100vh;
+    padding: 8rem 10% 2rem;
+    background-color: var(--bg-color);  /* h1 h3 yazıların rengi değişmiyor bg white kalsın*/
+}
+ /* NAVBAR */
+
+ .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 2rem 9%;
+    background-color: var(--bg-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+ }
+ .logo{
+    font-size: 2.5rem;
+    color: var(--text-color);
+    font-weight: 800;
+    cursor: default;
+ }
+ .navbar a {
+    font-size: 1.7rem;
+    color: var(--text-color);
+    margin-left: 4rem;
+ }
+ .navbar a:hover{
+    color: var(--main-color);
+ }
+
+ /* HOME */
+ .home{ 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ }
+ .home-img{
+    position: relative;
+    margin-left: 30px;
+}
+.home-img-clip{
+    /* position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; */
+    
+    background-color: var(--main-color); /* png in kapladığı alan */
+    z-index: -1;/*-1 verildi- pgnin kapladığı alanın bcg  gorselin arkasında kalsn"  */
+    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+
+}
+.home-img img{
+    width: 45vh;
+    /* animation ve filter aboutme alanından alındı */
+     /* animation: anim 30s infinite; kenarların oynaması için animasyon özelliği veriliyor ve sonsuz şekilde dönmesi gerekiyor */
+    /* background: var(--main-color); */
+    filter: drop-shadow(0 0 10rem var(--yellow-color)); /* ana fotoğraf üzerinden neon stillendirme */
+}
+.home-content h3 {
+    font-size: 3.2rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    
+}
+.home-content h1{
+    
+    font-size: 4.6rem;
+    font-weight: 700;
+    line-height: 1.3;
+    
+}
+.home-content { /* stillendirme p/h1/h2  color için açıldı # */
+    font-size: 3rem;
+    color: var(--text-color); 
+}
+.home-content p{
+    font-size: 1.6rem;
+    
+}
+.social-links a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 6rem;
+    color: var(--main-color);
+    margin: 3rem 1.5rem 3rem;
+}
+.social-links a:hover{ /* sosy. medya ikonlarını buton ve stil ekleme */
+    background-color: var(--main-color);
+    color: var(--bg-color);
+    transition: all 0.3s ease;
+    background-clip: text;
+    text-shadow: 0 0 1rem var(--main-color);
+}
+.home-span{
+    color: var(--bg-color);
+    position: relative;
+}
+.frontend-span,
+.backend-span,
+.fullstack-span{
+    position: absolute; /* yazılar üstüste gelmesi için*/
+    color: transparent; /* yazıların görünürlülüğü için*/
+    width: 0;
+    height: 100%;
+    background-color: var(--main-color);
+    background-clip: text;
+    left: 0;
+    top: 0;
+}
+/* hover sadece mause teması ile aktif oluyor burada yazı animasyonunun sürekli çalışmasını sağlayacağız. */
+.frontend-span{ /* hangi animasyon ne zaman ne kadar sürede etkili olsun */
+    animation: animate-front 6s ease-in-out infinite;
+/*animasyon olacaksın / 6saniyede sürecek / sürekli aynı şekildi işlesin / infinite olarak tanımlandı  */
+}
+.backend-span{
+    animation: animate-back 6s ease-in-out infinite;
+}
+.fullstack-span{
+    animation: animate-full 6s ease-in-out infinite;
+}
+.last-span{
+    
+    margin-left: 15rem;
+    color:var(--bg-color)
+}
+/* animasyonun aktif olması */
+@keyframes animate-front{
+    0%{ 
+        width: 0;
+    }
+    15.5%{
+        width: 100%;
+    }
+    /* buradaki %lik değerler her animasyonun oynama süreci içindir.  3 animasyonun 100 üzerinden eşit hareket etmesi için 100/3 ten 33 e kadar hareket etmeli ki diğer iki animasyonda 33 er değer alsın */
+    33%{
+        width: 0;
+    }
+}
+@keyframes animate-back{
+    33%{
+        width: 0;
+    }
+    48.5%{
+        width: 100%;
+    }
+    66%{
+        width: 0;
+    }
+}
+@keyframes animate-full{
+    66%{
+        width: 0;
+    }
+    81.5%{
+        width: 100%;
+    }
+    100%{
+        width: 0;
+    }
+}
+    /* About Start */
+.about{
+    display: flex;  /* elemenaları istediğ. gibi şekillendirmek */
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    background-color: var(--bg-color);
+
+}
+.about-content { /* stillendirme p/h1/h2  color için açıldı # */
+    font-size: 3rem;
+    color: var(--text-color); 
+    background-color: var(--bg-color);
+}
+.about-img img{
+    width: 85vh;
+    
+}
+.heading{
+    text-align: center;
+    font-size: 4.5rem;
+    color: var(--text-color);  /*  our için white color eklendi  */
+}
+
+.about-content h2{
+    text-align: left;
+    line-height: 1.2;
+}
+.about-content h3{
+    font-size: 2.6rem;
+}
+.about-content p{
+    position: relative;
+    font-size: 1.6rem;
+    margin: 2rem 0 2.8rem;
+}
+.about-btn{ /* buton ozelligi ekliyoruz */
+    display: inline-block;  /* yazı sabitlendi  */
+    padding: 1rem 3rem; /* iç bosluk */
+    background: var(--main-color); 
+    border-radius: 3rem; /* yuvarlak kenarlık */
+    font-size: 1.6rem;
+    color: var(--text-color);
+    letter-spacing: 700; /* yazı iç boşlık */
+    transition: 0.5rem;
+    filter: drop-shadow(0 0 5rem var(--main-color));
+}
+.about-btn:hover{
+    filter: none;
+    color: var(--text-color);
+
+}
+.about-span{
+    color: var(--main-color);
+    position: relative;
+}
+
+ .about-img img{
+    animation: anim 30s infinite; /* animyon özelliği veriliyor ve sonsuz şekilde dönmesi gerekiyor */
+    background: var(--main-color); 
+    /* sınırlandırmalar belli olması için bcg açıldı, bu ve alt satır gibi bir çok stillendirme üstüste bindirerek harketlendirme yapılabilir. */
+    filter: drop-shadow(0 0 10rem var(--yellow-color)); /* ana fotoğraf üzerinden neon stillendirme */
+    border: 3px solid var(--text-color);
+    border-radius: 30% 70% 53% 47%/ 26% 46% 54% 74%;
+ }
+ /* 1.00 ile görebilrim */
+ /* 0% ile 100% kısımların borderraidus geçişleri aynı olacak. Yukarıda verilen  anim 30s infinite; stillendirmesi üzerinden başlangıç ve bitişleri belirtmemiz gerekiyor. yoksa infinite üzerinden hata verbilir.  */
+ @keyframes  anim{
+    0%,
+    100%{
+        border-radius: 30% 70% 70% 30% / 30% 52% 48% 70%;
+    }
+    10%{
+        border-radius: 50% 50% 20% 80% / 25% 80% 20% 75%;
+    }
+    20%{
+        border-radius: 67% 33% 47% 53% / 37% 20% 80% 63%;
+    }
+    30%{
+        border-radius: 39% 61% 47% 53% / 37% 40% 60% 63%;
+    }
+    40%{
+        border-radius: 39% 61% 82% 18% / 74% 40% 60% 26%;
+    }
+ 
+    50%{
+        border-radius: 100%;
+    }
+    60%{
+        border-radius: 50% 50% 53% 47% / 72% 69% 31% 28%;
+    }
+    70%{
+        border-radius: 50% 50% 53% 47% / 26% 22% 78% 74%;
+    }
+    80%{
+        border-radius: 50% 50% 53% 47% / 26% 69% 31% 74%;
+    }
+    90%{
+        border-radius: 20% 80% 20% 80% / 20% 60% 20% 80%;
+    }
+
+ }
+ .about-content p span{
+    color: transparent;  /*  */
+    background-clip: text;
+    background-image: linear-gradient(
+        to left, /* soldan sağa */
+        var(--text-color),
+        var(--text-color)
+
+    );
+    background-repeat: no-repeat;
+    background-size: 0% 100%;
+    animation: animate-text 6s linear forwards; /* yazı animasyonu yatayşekilde 6 saniye boyunca tekrar eder */
+    animation-timeline: view(); /*view : ekranda görüntülenen  yazımız kendi görüntü ekranımız.  */
+    animation-range: contain; /* ekranıda görüntülenen alanı beliriyoruz, görüntülenmeden o ekran bizim ekranımız olmuyor  */
+    animation-range-start: 10vh; /*o alan ile etkileşime geçtiğimizde aktif olacak. / belitilen ekran 10vh iken görüntüleme başladığında animate başlar */
+    animation-range-end: 40vh; /*yazı kısa old için ekranın tamamını açmadan animate tamamlanması için 40vh verildi   */
+
+ }
+ @keyframes animate-text {
+    to {
+      background-size: 100% 100%;
+    }
+}
+/*  */
+
+/* About End */
+/* SERVICES START */
+.services {
+    background-color: var(--bg-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 15rem;
+    
+  }
+  .services-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+  }
+  .services-box {
+    flex: 1 1 30rem;
+    background-color: var(--second-bg-color);
+    padding: 3rem 2rem 4rem;
+    border-radius: 2rem;
+    text-align: center;
+    border: 0.2rem solid transparent;
+    transition: 0.4s ease;
+  }
+  .services-box i {
+    font-size: 7rem;
+    color: var(--main-color);
+  }
+  .services-btn {
+    display: inline-block;
+    padding: 1rem 3rem;
+    background: var(--main-color);
+    border-radius: 4rem;
+    font-size: 1.6rem;
+    color: var(--second-bg-color);
+    letter-spacing: 0.1rem;
+    font-weight: 600;
+    transition: 0.5s ease;
+  }
+  .services-box h3 {
+    font-size: 2.6rem;
+    margin-bottom: 3rem;
+  }
+  .services-box p {
+    font-size: 1.6rem;
+    margin: 1rem 0 3rem;
+    line-height: 1.5;
+  }
+  .services-box:hover {
+    border: 0.2rem solid var(--main-color);
+    transform: scale(1.05);
+  }
+  /*services-box ımız hover olduğunda butonunda etkilenmesi için */
+  .services-box:hover .services-btn {
+    filter: drop-shadow(0 0 2rem var(--main-color));
+  }
+  .services-span {
+    color: var(--main-color);
+    position: relative;
+  }
+  
+/* SERVICES END */
+/* Portfolio Start */
+.portfolio{
+    background-color: var(--bg-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 5rem;
+    text-align: center;
+    color: var(--text-color); /* metinler için white color eklendi  */
+}
+.portfolio-span{
+    color: var(--main-color);
+    position: relative;
+}
+.portfolio h2{
+    margin-bottom: 4rem;
+}
+.portfolio-container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    gap: 2.5rem;
+    
+}
+.portfolio-box{
+    position: relative;
+    border-radius: 2rem;
+    box-shadow: 0 0 1rem var(--bg-color);
+    overflow: hidden;
+    display: flex;
+   
+}
+.portfolio-box img{
+    /* görselleri box içine sıgdırıyor */
+    width: 100%; 
+    object-fit: cover;/* görsellerin tasma yapmasını engeller */
+        /* aspect-ratio: 4/3;   ögelerin aynı hiza ver ızgaralı olarak düzene alıyor   */
+    transition: 0.3s ease;
+    filter: drop-shadow(0 0 10rem var(--yellow-color)); 
+      /*ana fotoğraf üzerinde arkaplanda neon stillendirme // */
+}
+
+.portfolio-box:hover img{ /* hover olduğunda reaksiyon vermesi için */
+    transform: translateY(-100%);
+}
+.portfolio-box:hover .portfolio-layer{
+    transform: translateY(0);
+}
+.portfolio-layer{ /* port.box hover oduğunda genel yazılar için */
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 0 4rem;
+    transform: translateY(100%);  /* görsel gittiğinde yazı ekranın 100% ünü kaplar */
+    transition: 0.3s ease;
+    background:  radial-gradient(rgba(0,0,0,0.4),var(--main-color));
+}
+.portfolio-layer h4 {
+    font-size: 3rem;
+}
+.portfolio-layer p{
+    font-size: 1.5rem;
+    margin: 0.3rem 0 1rem;
+    line-height: 1.5;
+}
+.portfolio-layer a {
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+    width: 5rem;
+    height: 5rem;
+    background-color: #04f3eb;
+    border-radius: 50%;
+}
+.portfolio-layer a i {
+    margin-top: 1.5rem;
+    font-size: 2rem;
+    color: var(--bg-color);
+    
+}
+/* Portfolio End */
+
+/* Contact start */
+.contact{
+    background-color: var(--bg-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 5rem;
+}
+.contact span{
+    color: var(--main-color);
+    position: relative;
+}
+.contact form{
+    width: (100%,70rem);
+    text-align: center;
+}
+.contact-btn{
+    display: inline-block;
+    padding: 1rem 3rem;
+    background: var(--main-color);
+    border-radius: 4rem;
+    font-size: 1.6rem;
+    color: var(--text-color);
+    letter-spacing: 0.1rem;
+    font-weight: 600;
+    transition: 0.5s ease;
+    cursor: pointer;
+    margin: 2rem 0 0 0;
+    width: 300px;
+}
+
+.contact-btn:hover{
+    filter: drop-shadow(0 0 2rem var(--main-color))
+}
+.input-div{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.input-div input,
+form textarea{
+    width: 100%;
+    padding: 1.5rem;
+    font-size: 1.6rem;
+    color: var(--text-color);
+    background: var(--second-bg-color);
+    margin: 0.8rem 0;
+    border: 0.2rem solid transparent;
+}
+.input-div input{
+    width: 49%;
+}
+form textarea  {
+    resize: none; /* textarea kısmını boyutunun kullanıcı tarafından değişmesini engeller*/
+}
+.input-div input:focus,
+form textarea:focus{
+    outline: none;
+    border-bottom: 0.3rem  solid var(--main-color);
+    transition: 0.3s ease;
+}
+
+
+
+/* Contact End */
+ /* Foother start */
+.footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    /* flex-direction: row; */
+    padding: 2rem 10%;
+    background-color: var(--second-bg-color);
+
+}
+.footer-span{
+    background-color: var(--main-color);
+    border-radius: 2rem;
+    padding-left: 3px;
+}
+.footer p{
+    padding-top: 5px;
+    font-size: 1.6rem;
+    color: var(--text-color);
+}
+.footer-icon-top a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1.2rem;
+    background: var(--main-color);
+    border-radius: 0.5rem;
+    transition: 0.5s ease;
+    color: var(--text-color);
+}
+.footer-icon-top a i{
+    font-size: 2rem;
+    color: var(--second-bg-color);
+}
+.footer-icon-top a:hover{
+    box-shadow: 0 0 2rem var(--main-color);
+}
+ /* Foother end */
