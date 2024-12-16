@@ -57,33 +57,56 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     </script>
 
 
     <pre>    <strong>BOM (Browser Object Model)</strong>      web sayfasının tarayıcıyla ilişkili kısımlarını yönetir, yani tarayıcı
          penceresini ve onun özelliklerini kontrol etmek için kullanılır. Bu model, sayfa içeriğinden (DOM'dan) ziyade,
-         tarayıcıyla ilgili bilgilere ve işlemlere erişimi sağlar.</pre>
+         tarayıcıyla ilgili bilgilere ve işlemlere erişimi sağlar.
+   
+         *   BOM, tarayıcıda gezinme, konum, ekran bilgileri, çerezler ve daha fazlası ile ilgili işlemleri gerçekleştirmenizi sağlar.
+       </pre>
+
+       <h3> Bom Temel işlemleri</h3>
+       <pre>
+        Temel BOM İşlemleri:
+
+            Window Nesnesi:
+
+            alert gösterme:
+
+            window.alert("Merhaba!");
+            Yeni pencere açma:
+
+            let newWindow = window.open("https://www.patika.dev");
+            Pencere kapatma:
+
+            newWindow.close();
+            Navigator Nesnesi:
+
+            Tarayıcı bilgilerini alma:
+
+            console.log(navigator.userAgent);
+            console.log(navigator.language);
+            Location Nesnesi:
+
+            URL bilgilerini alma:
+
+            console.log(location.href);
+            console.log(location.hostname);
+            Başka bir URL'ye yönlendirme:
+
+            location.href = "https://www.patika.dev";
+            Screen Nesnesi:
+
+            Ekran bilgilerini alma:
+
+            console.log(screen.width);
+            console.log(screen.height);
+       </pre>
+
     <pre>
+
         window Nesnesi: BOM'un en önemli parçası window nesnesidir. <br>
         alert("Bu bir uyarı mesajıdır!");  // window.alert() ile aynı işlemi yapar
     </pre>

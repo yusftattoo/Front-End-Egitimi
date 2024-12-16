@@ -32,3 +32,23 @@ function cube2(sayi2){
     let sonuc2 = sayi2*sayi2*sayi2;
     return sonuc2;
 }
+
+// Examp 003. *************************
+
+function printScreen1 (){
+    console.log("İlk ekran çıktısı");
+        }
+
+function printScreen2 (){
+    setTimeout(function(){
+        console.log("İkinci ekran çıktısı");
+    }, 3000);
+        }
+
+function printScreen3 (){
+    console.log("Üçüncü ekran çıktısı");
+        }
+
+printScreen1();
+printScreen2();
+printScreen3();

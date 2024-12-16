@@ -181,7 +181,45 @@ Stil ve Sınıf Yönetimi
 
 
 -->
+  <h3>Dom Temel kullanımları</h3>
+<pre>
 
+  Temel DOM İşlemleri:
+
+Element Seçimi:
+
+getElementById:
+
+let element = document.getElementById("myElement");
+getElementsByClassName:
+
+let elements = document.getElementsByClassName("myClass");
+getElementsByTagName:
+
+let elements = document.getElementsByTagName("div");
+querySelector:
+
+let element = document.querySelector(".myClass");
+querySelectorAll:
+
+let elements = document.querySelectorAll(".myClass");
+İçerik ve Özellik Değiştirme:
+
+İçerik değiştirme:
+
+element.innerHTML = "Yeni İçerik";
+Özellik değiştirme:
+
+element.setAttribute("class", "newClass");
+element.id = "newId";
+Olay İşleme:
+
+Olay ekleme:
+
+element.addEventListener("click", function() {
+    alert("Element tıklandı!");
+});
+</pre>
 
 </body>
 </html>
