@@ -12,6 +12,7 @@ number[0]
 
 number[0] = 1;
 
+
 // Dizinin sonuna eleman ekleme
 strings.push("push","2");
 

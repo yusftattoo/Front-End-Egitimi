@@ -27,7 +27,7 @@ const person = {
 objelere erişmek için normalde person.name/age/city yazarız fakat,
  dinamik bir key olduğu için  [key] ile erişiyoruz.-- */
 //  ! "name-age-citydir" = KEY
-//  ! "Yusuf -31- Mersin" = VALUE
+//  ! "Yusuf -32- Mersin" = VALUE
 for(const key in person) {
     const value = person [key];
     console.log("for...in",key, value   );

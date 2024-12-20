@@ -1,5 +1,5 @@
 const user ={
-    name: "Yusff",
+    name: "Yusuf",
     surname:"Kybsi",
     age: 31,
     job: "sware. developer",

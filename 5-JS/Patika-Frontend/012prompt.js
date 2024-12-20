@@ -11,7 +11,6 @@ let hEtiketi = document.querySelector("#greeting")
 // promptan gelen bilginin yazması için ${fullName} eklenir. small style Ek ozellikler
 
 
-
 greeting.innerHTML = `${greeting.innerHTML}<small style="color:red">${fullName}</small>`
 
 

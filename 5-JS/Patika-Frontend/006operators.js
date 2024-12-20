@@ -22,7 +22,7 @@ if (visa){
     }
 }    else { 
     console.log("Talebiniz Reddedilmiştir.")
-
+ 
 };
 
 /******* */
