@@ -151,6 +151,7 @@
         </pre>
 
         <h2>Fonksiyon İfadeleri Function Expressions</h2>
+
         <pre>
             Fonksiyon yaratmanın bir diğer yolu, daha okunabilir daha basit bir syntax 
             yapısına sahip olan arrow functions yapısıdır.
@@ -160,7 +161,8 @@
 
             let func = (param1, param2, param3) => expression;
 
-            Yukarıdaki kod bloğu basitçe, bir param1,param2,param3 parametrelerini alan ve sağ taraftaki ifadeyi değerlendirip sonucunu döndüren bir fonksiyon oluşturur.
+            Yukarıdaki kod bloğu basitçe, bir param1,param2,param3 parametrelerini alan ve sağ 
+            taraftaki ifadeyi değerlendirip sonucunu döndüren bir fonksiyon oluşturur.
 
             Aslında aşağıdaki kod bloğu ile aynı işi yapmamaktadır.
 
@@ -173,7 +175,10 @@
             /* // Daha uzun hali ise; const carpim = function(sayi1,sayi2){ return sayi1 * sayi2; } */
 
             console.log(carpim(3, 5));
-            Yukarıda yazdığımız fonksiyon , 2 tane parametre alıp, console.log içerisinde fonksiyonu çağırdıktan sonra parametrelerin çarpımlarının değerini döndürmektedir. Eğer sadece tek bir parametre alması gereken bir fonksiyon yazsa idik, mesela girilen değerin karesini döndüren bir fonksiyon, arrow function syntax'ini şu şekilde de yazabilirdik.
+            Yukarıda yazdığımız fonksiyon , 2 tane parametre alıp, console.log içerisinde fonksiyonu 
+            çağırdıktan sonra parametrelerin çarpımlarının değerini döndürmektedir. Eğer sadece tek bir 
+            parametre alması gereken bir fonksiyon yazsa idik, mesela girilen değerin karesini döndüren bir fonksiyon,
+             arrow function syntax'ini şu şekilde de yazabilirdik.
 
             const karesiniAl = (sayi) => sayi * sayi;
             //Hiç parametre olmadığı zaman ise
