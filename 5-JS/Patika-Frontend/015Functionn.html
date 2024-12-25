@@ -6,7 +6,7 @@
     <title>Document</title>
 </head>
 <body>
-    <script src="003.2functionReturn.js"></script>
+    <script src="015function.js"></script>
 
     <h2>Parametresiz fonc.</h2>
     <pre> 
@@ -16,6 +16,11 @@
         *   {} : kod yazılacak alan.
         *   yazdir(); yazdır adındaki metodu çalıstır. birden fazla yazılıp çağırılabilir. 
                 bir sefer yazılan kodu bir çok sefer çağırabiliriz
+
+            <!-- exmp -->
+                function addition(sayi1,sayi2){  //function name and parameters
+                    console.log(sayi1+sayi2);     //body
+            }
 
         function yazdir(){
             console.log("Yusuf");
@@ -27,7 +32,7 @@
         function topla(){
             console.log(5+7);
         }
-        topla();  
+        topla()
     </pre>
     <pre>
         * kodun okunabilirliği açısından fonksiyonu işlevine uygun bir biçimde adlandırmaktır, dahası bu bir işlevi belirttiği için fonksiyon adımız bir eylem olmasına ozen gsterilmeli
@@ -106,5 +111,74 @@
         </pre>
 
         <!--  exam. js içerisinde 005 sırasında -->
+
+        <h2>Fonksiyon Bildirimi(Function Declaration)</h2>
+        <pre>
+            
+            Fonksiyon oluşturmak için fonksiyon bildirimi yapabiliriz. Mesela;
+            <!-- exmp. 006 içerisinde -->
+            function mesajVer() {
+                alert( 'Herkese Merhabalar!' );
+                }
+                mesajVer();
+                function anahtar kelimesini takiben fonksiyon ismi ve parantez 
+                içerisinde parametreler(virgülle ayrılacak şekilde) ve son olarak da
+                 süslü parantez içerisinde fonksiyonun içereceği kod(ki bu bölüme 
+                 fonksiyonun gövdesi(body) denir.) sırasıyla fonksiyonu oluşturur.
+
+
+        </pre>
+
+        <h2>Geri Dönüş Değeri (Return Value)</h2>
+<!-- exmp. 007 -->
+        <pre>
+
+            function topla(sayi1, sayi2) {
+                return sayi1 + sayi2;
+            };
+            
+            var sonuc = topla(10,20); // 30 döner
+
+            *****************
+
+            function carp(sayi1, sayi2) {
+                sayi1 * sayi2;
+                };
+                
+                result=carp(10,20); // undefined
+                "carp" fonksiyonunda ise return anahtar kelimesi kullanılmadığı için geri 
+                dönüş değeri yoktur,dolayısıyla "undefined" döner.
+        </pre>
+
+        <h2>Fonksiyon İfadeleri Function Expressions</h2>
+        <pre>
+            Fonksiyon yaratmanın bir diğer yolu, daha okunabilir daha basit bir syntax 
+            yapısına sahip olan arrow functions yapısıdır.
+
+
+
+
+            let func = (param1, param2, param3) => expression;
+
+            Yukarıdaki kod bloğu basitçe, bir param1,param2,param3 parametrelerini alan ve sağ taraftaki ifadeyi değerlendirip sonucunu döndüren bir fonksiyon oluşturur.
+
+            Aslında aşağıdaki kod bloğu ile aynı işi yapmamaktadır.
+
+            let func = function (param1, param2, param3) {
+            return expression;
+            };
+
+
+            const carpim = (sayi1, sayi2) => sayi1 * sayi2;
+            /* // Daha uzun hali ise; const carpim = function(sayi1,sayi2){ return sayi1 * sayi2; } */
+
+            console.log(carpim(3, 5));
+            Yukarıda yazdığımız fonksiyon , 2 tane parametre alıp, console.log içerisinde fonksiyonu çağırdıktan sonra parametrelerin çarpımlarının değerini döndürmektedir. Eğer sadece tek bir parametre alması gereken bir fonksiyon yazsa idik, mesela girilen değerin karesini döndüren bir fonksiyon, arrow function syntax'ini şu şekilde de yazabilirdik.
+
+            const karesiniAl = (sayi) => sayi * sayi;
+            //Hiç parametre olmadığı zaman ise
+            const helloWorld = () => console.log('Hello World');
+        </pre>
+
 </body>
 </html>
