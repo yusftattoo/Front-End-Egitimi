@@ -13,7 +13,7 @@ if (username) {
 var x =5;
 var y= 7;
 
-if(x>y) {
+if(x > y) {
     console.log(x + "sayisi" + y +  "sayisindan buyuktur"  );
 }
 else {

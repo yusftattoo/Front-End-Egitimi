@@ -23,13 +23,25 @@ function userCheck() {
 }
 
 
-hello() //calistir
+hello() //calistirir
 
 // exmp.
 function topla(){
     console.log(5+7);
 }
 topla();
+
+
+function greetings(firstName="", lastName=""){  //default parametre alıyor.
+    console.log(`Merhaba ${firstName}`)
+    console.log(`Merhaba ${firstName} ${lastName}`)
+    // burada firstName olarak tanımlı henüz bir default parametremiz yok, Yukarıda ="" ile  default parametre verilir
+    // bu parametre aşağıda "apple" ile tanımlanmış olacak..
+    // fonc içerisinde değişkene default parametre tannımlanmaz ise undefined hatasi verir
+}
+// şaun greeting in içerisine  buradan parametre gönderildi .(apple)
+// İkinci "" ile lastname tanımlandı.
+greetings("Apple", "Better")
 
 
 // Metin içeriği
@@ -89,7 +101,7 @@ function cube(sayi){
 // printScreen3();
 
 
-// // Examp 004
+// Examp 004
 
 //     function printScreen1() {
 //         console.log("İlk ekran çıktısı");
