@@ -1,9 +1,10 @@
 let username = prompt("kullanıcı adınızı giriniz:")
+
 // eger kullanıcı adı varsa ekrana isim yazar
 // eget (username.lenght > 0) {console.log(username)} degilse {console.log("bilgi yok")}
 // if (username.lenght > 0) {console.log(username)} else{console.log("bilgi yok")}
 
-if (username) {
+    if (username) {
     console.log(`kullanıcı bilgisi: ${username}`)
 } else {
     console.log("bilgi yok")
@@ -45,7 +46,4 @@ if(ogrOrtalama >= 0 && ogrOrtalama <=30) {
 
 
 
-    //  Not ortalaması hesapalama örneği
-
-
-    
+ 
