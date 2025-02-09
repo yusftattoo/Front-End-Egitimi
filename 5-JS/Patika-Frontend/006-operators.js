@@ -31,7 +31,7 @@ if (visa){
 if (visa && age >=18 || visa && permission){
         console.log("Türkiye'ye Hoşgeldiniz.");
     } else if (  visa && age < 18 || visa && !permission) {
-        console.log("Sahibinizin İzin gerekmektedir.");
+        console.log("Ailenizin İzin gerekmektedir.");
     } else{
         console.log("Talebiniz Reddedilmiştir.");
 

@@ -7,7 +7,7 @@ for (let i=0; i<5; i++){
     console.log("for", i);
 }
 for (let i=0; i<5; i++){
-    // durdurmak istediğimiz değer için if değeri kullalabilir.
+    // durdurmak istediğimiz deger icin if degeri kullanilabilir.
     if(i===2){
         break;
     }
@@ -98,5 +98,5 @@ do{
     console.log("do..while", count1);
     count1--;
 } while (count1 >10);
-/* buradan count1 değeri 10dan büyük ise ekrana yaz komutu var fakat 
-onun önceisinde kod dizinini bir defa çalıştırılmış bu neden ile / "5" yasıdı.           /*
+// buradan count1 değeri 10dan büyük ise ekrana yaz komutu var fakat 
+// onun önceisinde kod dizinini bir defa çalıştırılmış bu neden ile / "5" yasıdı.

@@ -1,4 +1,14 @@
-// 1. exm
+
+document.addEventListener("click",function(){
+    //! click event ı calistiginda function u calistir islem komutudur.
+})
+
+//!  *******  Arrow(FAT) Fonction da
+//! document.addEventListener("click" , () => {
+    //! buraya kod yazilir     })
+    
+    // 1. exm
+
 let title = document.getElementById('title')
 title.innerHTML = "Degisen bilgi"
 console.log(title.innerHTML)

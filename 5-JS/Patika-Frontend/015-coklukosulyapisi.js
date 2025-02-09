@@ -31,12 +31,12 @@ if(userName && age >= 18) {
 
 // ************* Ternary operator ile if kulklanımı ***********
 
-let userNamee = prompt("Kullani bilginizi yaziniz.")
-let infoo = document.querySelector("#infoo")
+// // let userNamee = prompt("Kullani bilginizi yaziniz.")
+// //let infoo = document.querySelector("#infoo")
 
 // ternary kullanimi:
 // kosul ? dogruysa : yanlissa
 
 //  userName.length > 0 ? userName: "Kullanici adiniz bulunamadi : ("
 
-infoo.innerHTML =`${ userNamee ? userNamee: "Kullanici adiniz bulunamadi : ("}`
+// // infoo.innerHTML =`${ userNamee ? userNamee: "Kullanici adiniz bulunamadi : ("}`
