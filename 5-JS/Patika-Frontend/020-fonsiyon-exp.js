@@ -5,7 +5,7 @@ let counterDOM = document.querySelector(`#counter`)
 let increaseDOM = document.querySelector(`#increase`)
 let decreaseDOM = document.querySelector(`#decrease`)
 
-counterDOM.innerHTML = counter
+counterDOM.innerHTML = counter //! html sayfasında yazdıgımız 100 bu kod satırı ile degisti 0 yazıyor
 
 increaseDOM.addEventListener("click", clickEvent )
 decreaseDOM.addEventListener("click", clickEvent )
