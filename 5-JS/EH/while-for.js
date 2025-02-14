@@ -1,1 +1,0 @@
-//! prompt&alert ile bilgi alirken islemimiz bittiginde prompt& alert ün tekrar islem bildirmesi icin while-for kullanilir.

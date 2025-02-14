@@ -65,7 +65,7 @@ x3 |= 3;    // (011 in binary) => x = 7 (111 in binary)
 
 // XOR atama operatörü: ^=
 let x4 = 5; // (101 in binary)
-x4 ^= 3;    // (011 in binary) => x = 6 (110 in binary)
+x4 += 3;    // (011 in binary) => x = 6 (110 in binary)
 
 
 // Sol kaydırma atama operatörü: <<=
