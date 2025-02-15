@@ -9,7 +9,7 @@ function yazdir (){
 
 // ! kodu nereden cagirdimiz onemli degil fakat senkronizeli 
     // ! calisma islemlerinde nereden cagirdigimiz onemlidir. 
-// 2. Paramereli metotlar
+//! 2. Paramereli metotlar
 
 function yazdirma(isim, soyisim){
     console.log(isim + " " + soyisim);
@@ -18,3 +18,5 @@ yazdirma("yusuf", "kayabsi");
 
 // ! asagıda senkronizeli islem mevcuttur.
 // ! önce kullanıcdan bilgi aliyoruz sonra alinan bilgiyi isley ip kullaniyoruz.
+
+
